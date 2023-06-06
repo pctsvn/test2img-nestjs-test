@@ -40,7 +40,7 @@ export class AIService {
         bodyInfo,
         options,
       );
-      if (result.data.output.length) {
+      if ((result?.data?.output || []).length) {
         return result.data.output;
       }
       throw new Error('Something when wrong');
